@@ -1,87 +1,92 @@
+# Wordle Game Clone
 
-Wordle Game Clone
-This is a Wordle-style game built using React. In this game, players try to guess a secret five-letter word within six tries. After each guess, feedback is provided to indicate which letters are:
+This is a **Wordle-style game** built using **React**. Players try to guess a secret five-letter word within six tries.  
+After each guess, feedback is provided to indicate which letters are:
 
-Correct and in the right position
+- Correct **and in the right position**
+- Correct **but in the wrong position**
+- **Not in the word** at all
 
-Correct but in the wrong position
+---
 
-Not in the word at all
+## Tech Stack
 
-Tech Stack
+- React – Frontend UI  
+- JavaScript – Game logic  
+- CSS – Styling  
+- JSON Server – Mock backend for storing game state or word list
 
-React – Frontend UI
+---
 
-JavaScript – Game logic
+## Getting Started
 
-CSS – Styling
+Follow these steps to set up and run the project successfully on your local machine.
+1. Clone the Repository
+bash
+git clone https://github.com/ridhimapatnala/wordle-react.git
+cd wordle-react
 
-JSON Server – Mock backend for storing game state or word list
-
-Getting Started
-
-Follow these steps exactly to set up and run the project successfully on your local machine.
-
-Clone the Repository
-
-https://github.com/ridhimapatnala/wordle-react.git
-cd <repo-name>
-
-Install Dependencies
-
+2. Install Dependencies
+bash
+Copy
+Edit
 npm install
+Installs all required packages listed in package.json.
 
-This command installs all required packages listed in package.json.
-
-Run the React App
-
+3. Run the React App
+bash
+Copy
+Edit
 npm start
-
 This will:
 
 Launch the development server
 
-Automatically open http://localhost:3000 in your default browser
+Automatically open http://localhost:3000
 
-Reload the page as you make changes to your code
+Reload on code changes
 
-Show lint errors in the terminal or browser console if any
+Show lint errors if any
 
 Running JSON Server (Mock Backend)
-The project uses a backend API (like for storing words), you'll need a mock server. Here's how:
+The project uses a mock backend API for storing words.
 
-Install JSON Server
-
+1. Install JSON Server (One-time setup)
+bash
+Copy
+Edit
 npm install -g json-server
+2. Create a db.json File
+Create this file in the root of the project. Example content:
 
-You only need to do this once globally.
+json
+Copy
+Edit
+{
+  "words": [
+    { "id": 1, "word": "apple" },
+    { "id": 2, "word": "brain" },
+    { "id": 3, "word": "crane" }
+  ]
+}
+Each word must be a valid 5-letter word.
 
-Create a db.json File
-
-Feel free to add more words. Each word should be a valid 5-letter word.
-
-Start the JSON Server
-
+3. Start the JSON Server
+bash
+Copy
+Edit
 json-server --watch db.json --port 3001
-
 This will:
 
-Start the mock API server on http://localhost:3001
+Start the mock API at http://localhost:3001
 
-Watch the db.json file for changes and update the API in real time
+Watch for real-time updates to db.json
 
 Available Scripts
+Run these using npm run <script-name>:
 
-These scripts are predefined in package.json. Run them using:
+npm start – Runs the app in development mode at http://localhost:3000
 
-npm run <script-name>
+npm test – Launches the test runner
 
-npm start
-Runs the app in development mode at http://localhost:3000
-
-npm test
-Launches the test runner in the interactive watch mode
-
-npm run build
-Builds the app for production to the build folder
-It bundles React in production mode and optimizes the build for best performance
+npm run build – Builds the app for production and optimizes for best performance
