@@ -4,9 +4,17 @@ import Grid from './Grid';
 import Keypad from './Keypad';
 import Final from './Final';
 
-export default function Wordle({solution}) {
-    const {currentGuess, handleKeyUp, guesses, isCorrect, turn, usedKeys} = useWordle(solution);
+export default function Wordle({solution, onFirstGuess}) {
+    const {currentGuess, handleKeyUp: originalHandleKeyUp, guesses, isCorrect, turn, usedKeys} = useWordle(solution);
     const [showModal, setShowModal]=useState(false);
+
+    const handleKeyUp = (event) => {
+        originalHandleKeyUp(event);
+        if (turn === 0 && onFirstGuess) {
+            onFirstGuess();
+        }
+    };
+
     useEffect(()=>{
         window.addEventListener('keyup', handleKeyUp)
 

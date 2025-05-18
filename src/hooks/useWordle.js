@@ -16,13 +16,13 @@ const useWordle = (solution) => {
 
         formattedGuess.forEach((l, i)=>{
             if(solutionArray[i] === l.key){
-                formattedGuess[i].color='purple'
+                l.color='purple'
                 solutionArray[i]=null;
             }
         })
         formattedGuess.forEach((l, i)=>{
             if(solutionArray.includes(l.key) && l.color!=='purple'){
-                formattedGuess[i].color='blue'
+                l.color='blue'
                 solutionArray[solutionArray.indexOf(l.key)]=null;
             }
         })

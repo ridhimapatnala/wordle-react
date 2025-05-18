@@ -8,11 +8,19 @@ h1 {
   font-size: 1.5em;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
-  margin: 0 0 30px 0;
+  margin: 0 0 0 0;
   color: #333;
 }
 h1 .fas fa-info-circle{
   cursor:pointer;
+}
+.app{
+  height: 500px;
+}
+.main-section{
+  max-width: 500px;
+  max-height: 600px;
+  margin: 0 auto;
 }
 .row {
   text-align: center;
@@ -35,8 +43,8 @@ h1 .fas fa-info-circle{
 }
 
 .row div.blue {
-  --background: #5aaec8;
-   --border-color: #5aaec8; 
+  --background: #c9b458;
+   --border-color: #c9b458; 
   animation: flip 0.5s ease forwards;
 }
 .row div.grey {
@@ -45,8 +53,8 @@ h1 .fas fa-info-circle{
     animation: flip 0.5s ease forwards;
 }
 .row div.purple {
-  --background: #7c68e2;
-   --border-color: #7c68e2; 
+  --background:#6aaa64;
+   --border-color:#6aaa64; 
   animation: flip 0.5s ease forwards;
 }
 
@@ -103,7 +111,7 @@ h1 .fas fa-info-circle{
 
 /* Key colors */
 .key.blue-key {
-  background-color: #5aaec8;
+  background-color: #c9b458;
 }
 
 .key.grey-key {
@@ -111,7 +119,7 @@ h1 .fas fa-info-circle{
 }
 
 .key.purple-key {
-  background-color: #7c68e2;
+  background-color:#6aaa64;
 }
 
 /* final modal pop up */
@@ -185,8 +193,8 @@ h1 .fas fa-info-circle{
   font-size: 1.5rem;
   cursor: pointer;
 }
-/* .purple { color: #7c68e2; }
-.blue { color: #5aaec8; }
+/* .purple { color:#6aaa64; }
+.blue { color: #c9b458; }
 .grey { color: grey; } */
 
 
